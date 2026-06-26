@@ -13,17 +13,21 @@
     </section>
 
     <section class="content-section links-grid">
-        <a href="https://www.who.int/" target="_blank" rel="noopener">
-            <strong>Organización Mundial de la Salud</strong>
-            <span>Información internacional sobre salud pública.</span>
+        <a href="http://www.incan.salud.gob.mx/" target="_blank" rel="noopener">
+            <strong>Instituto Nacional de Cancerología</strong>
+            <span>Centro de referencia nacional para diagnóstico, tratamiento e investigación oncológica en México.</span>
         </a>
-        <a href="https://www.gob.mx/salud" target="_blank" rel="noopener">
-            <strong>Secretaría de Salud</strong>
-            <span>Recursos y comunicados oficiales de salud en México.</span>
+        <a href="https://www.elsevier.es/es-revista-gaceta-mexicana-oncologia-305" target="_blank" rel="noopener">
+            <strong>Gaceta Mexicana de Oncología</strong>
+            <span>Revista científica especializada en oncología clínica y avances en el tratamiento del cáncer.</span>
         </a>
-        <a href="https://www.uaslp.mx/" target="_blank" rel="noopener">
-            <strong>Universidad Autónoma de San Luis Potosí</strong>
-            <span>Institución vinculada al proyecto.</span>
+        <a href="https://www.cancer.gov/espanol" target="_blank" rel="noopener">
+            <strong>Instituto Nacional del Cáncer</strong>
+            <span>Organismo líder en investigación oncológica de Estados Unidos con recursos en español.</span>
+        </a>
+        <a href="https://gco.iarc.fr/en" target="_blank" rel="noopener">
+            <strong>Observatorio de Cáncer, WHO</strong>
+            <span>Base de datos global de la OMS con estadísticas e incidencia del cáncer por país y región.</span>
         </a>
     </section>
 @endsection

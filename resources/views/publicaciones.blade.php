@@ -15,15 +15,15 @@
     <section class="content-section publication-overview" aria-label="Resumen de publicaciones">
         <div class="publication-stat">
             <strong>11</strong>
-            <span>productos académicos y de divulgación</span>
+            <span>Productos académicos y de divulgación</span>
         </div>
         <div class="publication-stat">
             <strong>2022-2025</strong>
-            <span>periodo de producción documentado</span>
+            <span>Periodo de producción documentado</span>
         </div>
         <div class="publication-stat">
             <strong>IA + Salud</strong>
-            <span>líneas de análisis computacional y prevención</span>
+            <span>Líneas de análisis computacional y prevención</span>
         </div>
     </section>
 
