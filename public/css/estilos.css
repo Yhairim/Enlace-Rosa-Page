@@ -202,8 +202,11 @@ nav ul li a.active {
 .page-shell {
     flex: 1;
     width: 100%;
-    background:
-        linear-gradient(180deg, #fffdfd 0%, #f8f8fa 48%, #fffdfd 100%);
+    background: linear-gradient(180deg, #fffdfd 0%, #f8f8fa 48%, #fffdfd 100%);
+}
+
+.page-hero.compact {
+    padding: 2rem 0 1rem;
 }
 
 .hero-section,
@@ -719,7 +722,11 @@ nav ul li a.active {
     position: relative;
     overflow: hidden;
     background:
-        linear-gradient(135deg, rgba(255, 240, 246, 0.95), rgba(255, 255, 255, 0.92)),
+        linear-gradient(
+            135deg,
+            rgba(255, 240, 246, 0.95),
+            rgba(255, 255, 255, 0.92)
+        ),
         var(--white);
     border-color: rgba(233, 30, 140, 0.25);
 }
@@ -793,8 +800,7 @@ nav ul li a.active {
 }
 
 .home-main {
-    background:
-        linear-gradient(180deg, #fffdfd 0%, #f8f8fa 48%, #fffdfd 100%);
+    background: linear-gradient(180deg, #fffdfd 0%, #f8f8fa 48%, #fffdfd 100%);
 }
 
 .home-main .hero-section {
@@ -863,7 +869,11 @@ nav ul li a.active {
 .home-main .carousel-shell {
     border-color: rgba(255, 255, 255, 0.94);
     background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(246, 247, 249, 0.88)),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(246, 247, 249, 0.88)
+        ),
         #ffffff;
     outline-color: rgba(44, 21, 34, 0.08);
     box-shadow: 0 22px 54px rgba(44, 21, 34, 0.1);
@@ -871,8 +881,18 @@ nav ul li a.active {
 
 .home-main .carousel-slide::after {
     background:
-        linear-gradient(90deg, rgba(44, 21, 34, 0.22), transparent 28%, transparent 74%, rgba(44, 21, 34, 0.12)),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(44, 21, 34, 0.13));
+        linear-gradient(
+            90deg,
+            rgba(44, 21, 34, 0.22),
+            transparent 28%,
+            transparent 74%,
+            rgba(44, 21, 34, 0.12)
+        ),
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(44, 21, 34, 0.13)
+        );
 }
 
 .home-main .carousel-controls button {
@@ -961,7 +981,11 @@ nav ul li a.active {
 
 .page-shell > .content-section .publication-card.featured {
     background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(246, 247, 249, 0.9)),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(246, 247, 249, 0.9)
+        ),
         #ffffff;
     border-color: rgba(44, 21, 34, 0.1);
 }
@@ -983,356 +1007,453 @@ nav ul li a.active {
     border-color: var(--pink-deep);
 }
 
-.clinical-hero h2 {
-    max-width: 900px;
+/* ═══════════════════════════════════════════════════════════════
+   INFORMACIÓN CLÍNICA — Estilos rediseñados
+   Prefijo: cl-   (evita colisiones con otras secciones del sitio)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Variables locales ──────────────────────────────────────── */
+
+:root {
+    --cl-pink: #c2185b;
+    --cl-pink-light: #e91e8c;
+    --cl-plum: #3d0d22;
+    --cl-bg: #fff0f5;
+    --cl-border: #f0d0dc;
+    --cl-text: #5a4a52;
+    --cl-muted: #9a6878;
 }
 
-.clinical-layout,
-.clinical-split {
-    display: grid;
-    gap: 18px;
+/* ─── Contenedor de página ───────────────────────────────────── */
+
+.cl-page {
+    width: min(1140px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 0 0 4rem;
 }
 
-.clinical-layout {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+/* ─── Divider decorativo bajo el hero ───────────────────────── */
+
+.cl-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--cl-pink);
+    border-radius: 2px;
+    margin: 0 0 2rem;
 }
 
-.clinical-split {
-    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-    align-items: stretch;
+/* ─── Prosa general ──────────────────────────────────────────── */
+
+.cl-prose p {
+    color: var(--cl-text);
+    font-size: 0.97rem;
+    line-height: 1.8;
+    margin-bottom: 1.1rem;
+    text-align: justify;
 }
 
-.clinical-card,
-.birads-card,
-.clinical-image-slot {
-    background: #ffffff;
-    border: 1px solid rgba(44, 21, 34, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 16px 34px rgba(44, 21, 34, 0.06);
+.cl-prose strong {
+    color: var(--cl-plum);
+    font-weight: 700;
 }
 
-.clinical-card {
-    padding: 24px;
-}
+/* ─── Encabezados de sección ─────────────────────────────────── */
 
-.clinical-wide {
-    max-width: none;
-}
-
-.clinical-kicker {
-    display: inline-flex;
-    width: fit-content;
-    align-items: center;
-    min-height: 28px;
-    padding: 5px 10px;
-    color: var(--pink-deep);
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.88);
-    border: 1px solid rgba(194, 24, 91, 0.18);
-    border-radius: 999px;
-    box-shadow: 0 8px 22px rgba(44, 21, 34, 0.04);
-}
-
-.clinical-card h3,
-.birads-section .section-heading h3 {
-    margin: 12px 0 10px;
-    color: var(--plum);
-    font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+.cl-heading {
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-weight: 700;
+    color: var(--cl-plum);
+    margin: 2.2rem 0 0.75rem;
     line-height: 1.25;
 }
 
-.clinical-card p,
-.birads-card p {
-    margin: 0;
-    color: #6f6670;
-    font-size: 0.96rem;
-    line-height: 1.72;
+/* ─── Lista flotante (pull list) ─────────────────────────────── */
+
+.cl-pull-list {
+    float: right;
+    clear: right;
+    width: 290px;
+    margin: 0.25rem 0 1.5rem 2rem;
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(44, 21, 34, 0.07);
 }
 
-.clinical-list {
-    margin: 14px 0 0;
-    padding-left: 20px;
-    color: #6f6670;
-    font-size: 0.96rem;
-    line-height: 1.75;
-}
-
-.clinical-list li + li {
-    margin-top: 8px;
-}
-
-.clinical-link {
-    color: var(--pink-deep);
+.cl-pull-list h4 {
+    font-size: 0.78rem;
     font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-pink);
+    margin-bottom: 1rem;
+}
+
+.cl-pull-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.cl-pull-list ul li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.88rem;
+    color: var(--cl-text);
+    line-height: 1.55;
+}
+
+.cl-pull-list ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cl-pink);
+}
+
+/* clearfix para el float */
+.cl-clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ─── Callout / enlace destacado ─────────────────────────────── */
+
+.cl-callout {
+    margin: 0.5rem 0 1.5rem;
+    padding: 0.9rem 1.25rem;
+    border-left: 3px solid var(--cl-pink);
+    background: var(--cl-bg);
+    border-radius: 0 8px 8px 0;
+}
+
+.cl-callout p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cl-pink) !important;
+}
+
+.cl-callout a {
+    color: var(--cl-pink);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.clinical-link:hover {
-    color: var(--pink-hot);
+.cl-callout a:hover {
+    color: var(--cl-pink-light);
 }
 
-.clinical-image-slot {
-    min-height: 290px;
-    padding: 18px;
+/* ─── BI-RADS ────────────────────────────────────────────────── */
+
+.cl-birads {
+    margin: 2.5rem 0;
+}
+
+.cl-birads-sub {
+    color: var(--cl-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 780px;
+}
+
+.cl-birads-grid {
     display: grid;
-    align-content: center;
-    gap: 12px;
-    overflow: hidden;
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(246, 247, 249, 0.9)),
-        #ffffff;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
 }
 
-.clinical-image-slot img {
-    width: 100%;
-    min-height: 220px;
-    max-height: 360px;
-    object-fit: contain;
-    border: 1px dashed rgba(44, 21, 34, 0.18);
+.cl-b-step {
+    padding: 0.9rem 0.75rem;
     border-radius: 8px;
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 248, 250, 0.92)),
-        #ffffff;
-}
-
-.clinical-image-slot figcaption {
-    color: var(--pink-deep);
-    font-size: 0.82rem;
-    font-weight: 800;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-left: 3px solid transparent;
 }
 
-.birads-section {
-    display: grid;
-    gap: 18px;
-}
-
-.birads-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-}
-
-.birads-card {
-    position: relative;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.birads-card::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 4px;
-    background: var(--pink-deep);
-}
-
-.birads-card span {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--plum);
-    font-size: 0.9rem;
+.cl-b-cat {
+    font-size: 0.7rem;
     font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: block;
 }
 
-.references-card {
-    border-color: rgba(194, 24, 91, 0.16);
+.cl-b-desc {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    display: block;
+    opacity: 0.88;
 }
 
-.references-list {
-    margin-top: 12px;
+/* colores por categoría */
+.cl-b0 {
+    background: #f0f0f0;
+    border-left-color: #999;
+}
+.cl-b0 .cl-b-cat {
+    color: #555;
+}
+.cl-b0 .cl-b-desc {
+    color: #555;
 }
 
-.clinical-story {
-    max-width: 980px;
-    padding-top: 18px;
+.cl-b1 {
+    background: #d4e8f7;
+    border-left-color: #4a90c4;
+}
+.cl-b1 .cl-b-cat {
+    color: #1a5a8a;
+}
+.cl-b1 .cl-b-desc {
+    color: #1a5a8a;
+}
+
+.cl-b2 {
+    background: #c5e8c5;
+    border-left-color: #3a8a3a;
+}
+.cl-b2 .cl-b-cat {
+    color: #1d5a1d;
+}
+.cl-b2 .cl-b-desc {
+    color: #1d5a1d;
+}
+
+.cl-b3 {
+    background: #f5e97a;
+    border-left-color: #c9a800;
+}
+.cl-b3 .cl-b-cat {
+    color: #7a6200;
+}
+.cl-b3 .cl-b-desc {
+    color: #7a6200;
+}
+
+.cl-b4 {
+    background: #f5c46a;
+    border-left-color: #c46800;
+}
+.cl-b4 .cl-b-cat {
+    color: #7a3d00;
+}
+.cl-b4 .cl-b-desc {
+    color: #7a3d00;
+}
+
+.cl-b5 {
+    background: #c84020;
+    border-left-color: #901a06;
+}
+.cl-b5 .cl-b-cat,
+.cl-b5 .cl-b-desc {
+    color: #ffffff;
+}
+
+.cl-b6 {
+    background: #8a0c0c;
+    border-left-color: #5a0000;
+}
+.cl-b6 .cl-b-cat,
+.cl-b6 .cl-b-desc {
+    color: #ffffff;
+}
+
+/* ─── Estudios adicionales ───────────────────────────────────── */
+
+.cl-estudios {
+    margin: 2.5rem 0;
+}
+
+.cl-estudios-grid {
     display: grid;
-    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
 }
 
-.clinical-chapter {
-    position: relative;
-    display: grid;
-    grid-template-columns: 58px minmax(0, 1fr);
-    gap: 20px;
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(44, 21, 34, 0.1);
+.cl-estudio-card {
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(44, 21, 34, 0.06);
+    display: flex;
+    flex-direction: column;
 }
 
-.clinical-chapter:first-child {
-    padding-top: 10px;
+/* cabecera de cada tarjeta */
+.cl-estudio-header {
+    background: var(--cl-bg);
+    border-bottom: 1px solid var(--cl-border);
+    padding: 0.85rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.clinical-chapter:last-child {
-    border-bottom: 0;
-}
-
-.clinical-section-label {
-    width: 42px;
-    height: 42px;
-    display: inline-flex;
+.cl-estudio-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--cl-pink);
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--pink-deep);
-    font-size: 0.78rem;
-    font-weight: 800;
-    background: #ffffff;
-    border: 1px solid rgba(194, 24, 91, 0.2);
-    border-radius: 999px;
-    box-shadow: 0 8px 22px rgba(44, 21, 34, 0.06);
+    flex-shrink: 0;
+    color: #ffffff;
 }
 
-.clinical-section-body {
-    min-width: 0;
+.cl-estudio-icon svg {
+    width: 17px;
+    height: 17px;
 }
 
-.clinical-section-body h3 {
-    margin: 0 0 14px;
-    color: var(--plum);
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
-    line-height: 1.25;
-}
-
-.clinical-section-body p {
-    margin: 0;
-    color: #5f5860;
-    font-size: 0.98rem;
-    line-height: 1.78;
-}
-
-.clinical-section-body p + p {
-    margin-top: 14px;
-}
-
-.clinical-media-chapter {
-    grid-template-columns: 58px minmax(0, 1fr) minmax(260px, 0.62fr);
-    align-items: center;
-}
-
-.clinical-media-chapter .clinical-image-slot {
-    margin: 0;
-}
-
-.clinical-callout {
-    margin-top: 18px !important;
-    padding: 14px 16px;
-    color: var(--plum) !important;
+.cl-estudio-header h3 {
+    font-size: 0.95rem;
     font-weight: 700;
-    background: #ffffff;
-    border-left: 4px solid var(--pink-deep);
-    border-radius: 8px;
-    box-shadow: 0 12px 28px rgba(44, 21, 34, 0.06);
-}
-
-.clinical-checklist {
-    margin: 16px 0 0;
-    padding: 0;
-    display: grid;
-    gap: 10px;
-    list-style: none;
-}
-
-.clinical-checklist li {
-    position: relative;
-    padding: 12px 14px 12px 38px;
-    background: #ffffff;
-    border: 1px solid rgba(44, 21, 34, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 10px 24px rgba(44, 21, 34, 0.05);
-}
-
-.clinical-checklist li::before {
-    content: "";
-    position: absolute;
-    left: 14px;
-    top: 18px;
-    width: 9px;
-    height: 9px;
-    background: var(--pink-deep);
-    border-radius: 50%;
-}
-
-.birads-chapter {
-    padding-top: 34px;
-    padding-bottom: 36px;
-}
-
-.birads-spectrum {
-    position: relative;
-    margin: 24px 0;
-    display: grid;
-    grid-template-columns: repeat(7, minmax(120px, 1fr));
-    gap: 0;
-    overflow-x: auto;
-    padding-bottom: 6px;
-}
-
-.birads-spectrum::before {
-    content: "";
-    position: absolute;
-    top: 32px;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: linear-gradient(90deg, #9ca3af, #16a34a, #86efac, #facc15, #fb923c, #ef4444, #7f1d1d);
-    border-radius: 999px;
-}
-
-.birads-step {
-    position: relative;
-    min-width: 120px;
-    padding: 62px 10px 0;
-    text-align: center;
-}
-
-.birads-step::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    z-index: 1;
-    width: 28px;
-    height: 28px;
-    transform: translateX(-50%);
-    background: var(--risk-color);
-    border: 4px solid #ffffff;
-    border-radius: 999px;
-    box-shadow: 0 8px 20px rgba(44, 21, 34, 0.16);
-}
-
-.birads-step span {
-    display: block;
-    color: var(--plum);
-    font-size: 0.82rem;
-    font-weight: 900;
-}
-
-.birads-step strong {
-    display: block;
-    margin: 5px 0 8px;
-    color: var(--risk-color);
-    font-size: 0.72rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.birads-step p {
+    color: var(--cl-plum);
     margin: 0;
-    color: #5f5860;
-    font-size: 0.82rem;
-    line-height: 1.45;
 }
 
-.birads-0 { --risk-color: #6b7280; }
-.birads-1 { --risk-color: #16a34a; }
-.birads-2 { --risk-color: #65a30d; }
-.birads-3 { --risk-color: #ca8a04; }
-.birads-4 { --risk-color: #ea580c; }
-.birads-5 { --risk-color: #dc2626; }
-.birads-6 { --risk-color: #7f1d1d; }
+.cl-estudio-header p {
+    font-size: 0.78rem;
+    color: var(--cl-muted);
+    margin: 2px 0 0;
+}
+
+/* imagen dentro de la tarjeta */
+.cl-estudio-img {
+    margin: 0;
+    background: linear-gradient(135deg, var(--cl-bg), #fdf5f8);
+    border-bottom: 1px dashed var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.cl-estudio-img img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    display: block;
+}
+
+/* pie de tarjeta */
+.cl-estudio-body {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.86rem;
+    color: var(--cl-muted);
+    line-height: 1.65;
+}
+
+/* ─── Referencias ────────────────────────────────────────────── */
+
+.cl-referencias {
+    margin: 2.5rem 0 1rem;
+}
+
+.cl-heading--refs {
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--cl-border);
+    margin-top: 0;
+}
+
+.cl-ref-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.cl-ref-item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    padding: 0.85rem 1rem;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44, 21, 34, 0.04);
+}
+
+.cl-ref-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--cl-bg);
+    border: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--cl-pink);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.cl-ref-text {
+    font-size: 0.87rem;
+    color: var(--cl-text);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.cl-ref-text em {
+    font-style: italic;
+}
+
+.cl-ref-text a {
+    color: var(--cl-pink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-size: 0.82rem;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.cl-ref-text a:hover {
+    color: var(--cl-pink-light);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+    .cl-page {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    /* pull list deja de flotar y se apila */
+    .cl-pull-list {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.25rem;
+    }
+
+    /* estudios en columna única */
+    .cl-estudios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* BI-RADS en 2 columnas en móvil */
+    .cl-birads-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 .references-card {
     padding-bottom: 12px;
