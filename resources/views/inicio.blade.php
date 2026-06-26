@@ -3,6 +3,7 @@
 @section('title', 'Inicio - Enlace Rosa')
 
 @section('content')
+    <div class="home-main">
     <section class="hero-section">
         <div class="hero-copy">
             <span class="eyebrow">Investigación, prevención y acompañamiento</span>
@@ -59,4 +60,5 @@
             </a>
         </div>
     </section>
+    </div>
 @endsection

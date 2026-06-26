@@ -20,18 +20,19 @@
             <img src="{{ asset('images/logo_inge.png') }}" alt="Facultad de Ingeniería">
         </a>
 
-        <div>
-            <h1>ENLACE ROSA</h1>
+        <div class="brand-copy">
+            <div class="brand-lockup">
+                <h1>ENLACE ROSA</h1>
+                {{--
+                    HEADER IMAGE SLOT: Enlace Rosa decorative image
+                    Current expected file path: public/images/flor.png
+                    Accepted formats: .png, .jpg, .jpeg, .webp, .svg
+                    If you use a different file name or format, update the asset path below.
+                --}}
+                <img class="brand-flower" src="{{ asset('images/flor.png') }}" alt="Enlace Rosa">
+            </div>
             <p>Un entorno tecnológico para la valoración de cáncer de mama</p>
         </div>
     </div>
-
-    {{--
-        HEADER IMAGE SLOT: Enlace Rosa decorative image
-        Current expected file path: public/images/flor.png
-        Accepted formats: .png, .jpg, .jpeg, .webp, .svg
-        If you use a different file name or format, update the asset path below.
-    --}}
-    <img src="{{ asset('images/flor.png') }}" alt="Enlace Rosa">
 
 </header>

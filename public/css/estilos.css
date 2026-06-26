@@ -103,7 +103,7 @@ header > div > a {
     border-radius: 8px;
 }
 
-header > div img {
+header > div > a img {
     max-width: 118px;
     height: 50px;
     object-fit: contain;
@@ -118,8 +118,14 @@ header > div > div {
     line-height: 1.1;
 }
 
+.brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
 header h1 {
-    margin: 0 0 4px;
+    margin: 0;
     color: var(--pink-deep);
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(1.4rem, 2.4vw, 2.25rem);
@@ -129,17 +135,18 @@ header h1 {
 
 header p {
     max-width: 520px;
-    margin: 0;
+    margin: 4px 0 0;
     color: var(--berry);
     font-size: clamp(0.74rem, 1.2vw, 0.92rem);
     font-weight: 500;
 }
 
-header > img {
-    width: 72px;
-    height: 72px;
+.brand-flower {
+    width: clamp(34px, 3.6vw, 48px);
+    height: clamp(34px, 3.6vw, 48px);
     padding: 0;
     object-fit: contain;
+    flex: 0 0 auto;
 }
 
 nav {
@@ -195,6 +202,8 @@ nav ul li a.active {
 .page-shell {
     flex: 1;
     width: 100%;
+    background:
+        linear-gradient(180deg, #fffdfd 0%, #f8f8fa 48%, #fffdfd 100%);
 }
 
 .hero-section,
@@ -215,11 +224,12 @@ nav ul li a.active {
 
 .hero-copy h2,
 .page-hero h2 {
-    margin: 10px 0 18px;
-    color: var(--plum);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(3rem, 8vw, 6.6rem);
-    line-height: 0.93;
+    margin: 10px 0 14px;
+    color: var(--pink-deep);
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.08;
     letter-spacing: 0;
 }
 
@@ -230,8 +240,8 @@ nav ul li a.active {
 .feature-card p,
 .publication-list p {
     color: var(--text-muted);
-    font-size: clamp(1rem, 1.4vw, 1.12rem);
-    line-height: 1.75;
+    font-size: clamp(0.92rem, 1.1vw, 1rem);
+    line-height: 1.65;
 }
 
 .hero-copy p {
@@ -327,8 +337,9 @@ nav ul li a.active {
 .hero-panel strong {
     display: block;
     color: var(--pink-deep);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 2rem;
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
     line-height: 1;
 }
 
@@ -433,8 +444,8 @@ nav ul li a.active {
 }
 
 .carousel-placeholder span {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 700;
 }
 
@@ -512,8 +523,8 @@ nav ul li a.active {
 
 .page-hero.compact h2 {
     max-width: 880px;
-    font-size: clamp(2.4rem, 5.4vw, 4.8rem);
-    line-height: 1;
+    font-size: clamp(1.8rem, 3.4vw, 2.65rem);
+    line-height: 1.12;
 }
 
 .page-hero p {
@@ -533,9 +544,10 @@ nav ul li a.active {
 .info-block h3,
 .publication-list h3 {
     margin: 10px 0;
-    color: var(--plum);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    color: var(--pink-deep);
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    font-weight: 700;
     letter-spacing: 0;
 }
 
@@ -576,7 +588,8 @@ nav ul li a.active {
 .feature-card h4 {
     margin: 18px 0 10px;
     color: var(--plum);
-    font-size: 1.35rem;
+    font-size: 1.05rem;
+    font-weight: 700;
 }
 
 .feature-card p {
@@ -642,6 +655,706 @@ nav ul li a.active {
     align-items: center;
 }
 
+.publications-hero {
+    padding-bottom: 18px;
+}
+
+.publication-overview {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.publication-stat {
+    padding: 20px 22px;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 14px 34px rgba(194, 24, 91, 0.08);
+}
+
+.publication-stat strong {
+    display: block;
+    color: var(--pink-deep);
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.1;
+}
+
+.publication-stat span {
+    display: block;
+    margin-top: 7px;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.publication-featured {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.publication-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.publication-card {
+    min-height: 100%;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 16px 38px rgba(194, 24, 91, 0.08);
+}
+
+.publication-card.featured {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(255, 240, 246, 0.95), rgba(255, 255, 255, 0.92)),
+        var(--white);
+    border-color: rgba(233, 30, 140, 0.25);
+}
+
+.publication-card.featured::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: linear-gradient(180deg, var(--pink-hot), var(--pink-deep));
+}
+
+.publication-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--pink-deep);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.publication-meta span {
+    padding: 5px 9px;
+    background: rgba(255, 225, 236, 0.72);
+    border: 1px solid rgba(233, 30, 140, 0.16);
+    border-radius: 999px;
+}
+
+.publication-meta time {
+    color: var(--berry);
+    white-space: nowrap;
+}
+
+.publication-card h3 {
+    margin: 0;
+    color: var(--plum);
+    font-size: clamp(1rem, 1.25vw, 1.14rem);
+    line-height: 1.35;
+}
+
+.publication-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.publication-card a {
+    width: fit-content;
+    margin-top: auto;
+    padding: 8px 12px;
+    color: var(--pink-deep);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid rgba(194, 24, 91, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.68);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.publication-card a:hover {
+    color: var(--white);
+    background: var(--pink-deep);
+    border-color: var(--pink-deep);
+}
+
+.home-main {
+    background:
+        linear-gradient(180deg, #fffdfd 0%, #f8f8fa 48%, #fffdfd 100%);
+}
+
+.home-main .hero-section {
+    min-height: 480px;
+}
+
+.home-main .hero-copy h2,
+.home-main .section-heading h3 {
+    color: var(--plum);
+}
+
+.home-main .hero-copy p,
+.home-main .section-heading p,
+.home-main .feature-card p {
+    color: #6f6670;
+}
+
+.home-main .eyebrow {
+    color: var(--pink-deep);
+    background: rgba(255, 255, 255, 0.86);
+    border-color: rgba(194, 24, 91, 0.18);
+    box-shadow: 0 8px 22px rgba(44, 21, 34, 0.04);
+}
+
+.home-main .hero-panel {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(44, 21, 34, 0.09);
+    box-shadow: 0 22px 54px rgba(44, 21, 34, 0.09);
+}
+
+.home-main .hero-panel div,
+.home-main .feature-card {
+    background: #ffffff;
+    border-color: rgba(44, 21, 34, 0.1);
+}
+
+.home-main .hero-panel strong,
+.home-main .feature-card span {
+    color: var(--pink-deep);
+}
+
+.home-main .hero-panel span {
+    color: #746a73;
+}
+
+.home-main .button-primary {
+    background: var(--pink-deep);
+    box-shadow: 0 12px 26px rgba(194, 24, 91, 0.22);
+}
+
+.home-main .button-secondary {
+    color: var(--plum);
+    background: #ffffff;
+    border-color: rgba(44, 21, 34, 0.14);
+}
+
+.home-main .button-secondary:hover {
+    color: var(--pink-deep);
+    border-color: rgba(194, 24, 91, 0.28);
+}
+
+.home-main .carousel-section {
+    background: transparent;
+}
+
+.home-main .carousel-shell {
+    border-color: rgba(255, 255, 255, 0.94);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(246, 247, 249, 0.88)),
+        #ffffff;
+    outline-color: rgba(44, 21, 34, 0.08);
+    box-shadow: 0 22px 54px rgba(44, 21, 34, 0.1);
+}
+
+.home-main .carousel-slide::after {
+    background:
+        linear-gradient(90deg, rgba(44, 21, 34, 0.22), transparent 28%, transparent 74%, rgba(44, 21, 34, 0.12)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(44, 21, 34, 0.13));
+}
+
+.home-main .carousel-controls button {
+    background: rgba(194, 24, 91, 0.9);
+}
+
+.home-main .carousel-dots {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(44, 21, 34, 0.12);
+}
+
+.home-main .feature-card {
+    box-shadow: 0 16px 34px rgba(44, 21, 34, 0.06);
+}
+
+.home-main .feature-card:hover {
+    border-color: rgba(194, 24, 91, 0.26);
+    box-shadow: 0 20px 42px rgba(194, 24, 91, 0.12);
+}
+
+.page-shell > .page-hero,
+.page-shell > .content-section {
+    position: relative;
+}
+
+.page-shell > .page-hero {
+    padding-bottom: 22px;
+}
+
+.page-shell > .page-hero h2,
+.page-shell > .content-section .section-heading h3 {
+    color: var(--plum);
+}
+
+.page-shell > .page-hero p,
+.page-shell > .content-section .section-heading p,
+.page-shell > .content-section .info-block p,
+.page-shell > .content-section .feature-card p,
+.page-shell > .content-section .publication-card p,
+.page-shell > .content-section .publication-stat span,
+.page-shell > .content-section .links-grid span,
+.page-shell > .content-section .timeline-list span {
+    color: #6f6670;
+}
+
+.page-shell > .page-hero .eyebrow,
+.page-shell > .content-section .eyebrow,
+.page-shell > .content-section .publication-meta span {
+    color: var(--pink-deep);
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(194, 24, 91, 0.18);
+    box-shadow: 0 8px 22px rgba(44, 21, 34, 0.04);
+}
+
+.page-shell > .content-section .info-block,
+.page-shell > .content-section .feature-card,
+.page-shell > .content-section .links-grid a,
+.page-shell > .content-section .timeline-list div,
+.page-shell > .content-section .publication-card,
+.page-shell > .content-section .publication-stat {
+    background: #ffffff;
+    border-color: rgba(44, 21, 34, 0.1);
+    box-shadow: 0 16px 34px rgba(44, 21, 34, 0.06);
+}
+
+.page-shell > .content-section .info-block h3,
+.page-shell > .content-section .links-grid strong,
+.page-shell > .content-section .timeline-list strong,
+.page-shell > .content-section .publication-stat strong,
+.page-shell > .content-section .publication-card h3 {
+    color: var(--plum);
+}
+
+.page-shell > .content-section .feature-card span,
+.page-shell > .content-section .publication-stat strong,
+.page-shell > .content-section .timeline-list strong {
+    color: var(--pink-deep);
+}
+
+.page-shell > .content-section .feature-card:hover,
+.page-shell > .content-section .links-grid a:hover,
+.page-shell > .content-section .publication-card:hover {
+    border-color: rgba(194, 24, 91, 0.26);
+    box-shadow: 0 20px 42px rgba(194, 24, 91, 0.12);
+}
+
+.page-shell > .content-section .publication-card.featured {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(246, 247, 249, 0.9)),
+        #ffffff;
+    border-color: rgba(44, 21, 34, 0.1);
+}
+
+.page-shell > .content-section .publication-card.featured::before {
+    width: 4px;
+    background: var(--pink-deep);
+}
+
+.page-shell > .content-section .publication-card a {
+    color: var(--pink-deep);
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(194, 24, 91, 0.22);
+}
+
+.page-shell > .content-section .publication-card a:hover {
+    color: #ffffff;
+    background: var(--pink-deep);
+    border-color: var(--pink-deep);
+}
+
+.clinical-hero h2 {
+    max-width: 900px;
+}
+
+.clinical-layout,
+.clinical-split {
+    display: grid;
+    gap: 18px;
+}
+
+.clinical-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.clinical-split {
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    align-items: stretch;
+}
+
+.clinical-card,
+.birads-card,
+.clinical-image-slot {
+    background: #ffffff;
+    border: 1px solid rgba(44, 21, 34, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 16px 34px rgba(44, 21, 34, 0.06);
+}
+
+.clinical-card {
+    padding: 24px;
+}
+
+.clinical-wide {
+    max-width: none;
+}
+
+.clinical-kicker {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    min-height: 28px;
+    padding: 5px 10px;
+    color: var(--pink-deep);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(194, 24, 91, 0.18);
+    border-radius: 999px;
+    box-shadow: 0 8px 22px rgba(44, 21, 34, 0.04);
+}
+
+.clinical-card h3,
+.birads-section .section-heading h3 {
+    margin: 12px 0 10px;
+    color: var(--plum);
+    font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+    line-height: 1.25;
+}
+
+.clinical-card p,
+.birads-card p {
+    margin: 0;
+    color: #6f6670;
+    font-size: 0.96rem;
+    line-height: 1.72;
+}
+
+.clinical-list {
+    margin: 14px 0 0;
+    padding-left: 20px;
+    color: #6f6670;
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.clinical-list li + li {
+    margin-top: 8px;
+}
+
+.clinical-link {
+    color: var(--pink-deep);
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.clinical-link:hover {
+    color: var(--pink-hot);
+}
+
+.clinical-image-slot {
+    min-height: 290px;
+    padding: 18px;
+    display: grid;
+    align-content: center;
+    gap: 12px;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(246, 247, 249, 0.9)),
+        #ffffff;
+}
+
+.clinical-image-slot img {
+    width: 100%;
+    min-height: 220px;
+    max-height: 360px;
+    object-fit: contain;
+    border: 1px dashed rgba(44, 21, 34, 0.18);
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 248, 250, 0.92)),
+        #ffffff;
+}
+
+.clinical-image-slot figcaption {
+    color: var(--pink-deep);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.birads-section {
+    display: grid;
+    gap: 18px;
+}
+
+.birads-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.birads-card {
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.birads-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--pink-deep);
+}
+
+.birads-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--plum);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.references-card {
+    border-color: rgba(194, 24, 91, 0.16);
+}
+
+.references-list {
+    margin-top: 12px;
+}
+
+.clinical-story {
+    max-width: 980px;
+    padding-top: 18px;
+    display: grid;
+    gap: 0;
+}
+
+.clinical-chapter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 20px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(44, 21, 34, 0.1);
+}
+
+.clinical-chapter:first-child {
+    padding-top: 10px;
+}
+
+.clinical-chapter:last-child {
+    border-bottom: 0;
+}
+
+.clinical-section-label {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink-deep);
+    font-size: 0.78rem;
+    font-weight: 800;
+    background: #ffffff;
+    border: 1px solid rgba(194, 24, 91, 0.2);
+    border-radius: 999px;
+    box-shadow: 0 8px 22px rgba(44, 21, 34, 0.06);
+}
+
+.clinical-section-body {
+    min-width: 0;
+}
+
+.clinical-section-body h3 {
+    margin: 0 0 14px;
+    color: var(--plum);
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.25;
+}
+
+.clinical-section-body p {
+    margin: 0;
+    color: #5f5860;
+    font-size: 0.98rem;
+    line-height: 1.78;
+}
+
+.clinical-section-body p + p {
+    margin-top: 14px;
+}
+
+.clinical-media-chapter {
+    grid-template-columns: 58px minmax(0, 1fr) minmax(260px, 0.62fr);
+    align-items: center;
+}
+
+.clinical-media-chapter .clinical-image-slot {
+    margin: 0;
+}
+
+.clinical-callout {
+    margin-top: 18px !important;
+    padding: 14px 16px;
+    color: var(--plum) !important;
+    font-weight: 700;
+    background: #ffffff;
+    border-left: 4px solid var(--pink-deep);
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(44, 21, 34, 0.06);
+}
+
+.clinical-checklist {
+    margin: 16px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+.clinical-checklist li {
+    position: relative;
+    padding: 12px 14px 12px 38px;
+    background: #ffffff;
+    border: 1px solid rgba(44, 21, 34, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(44, 21, 34, 0.05);
+}
+
+.clinical-checklist li::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 18px;
+    width: 9px;
+    height: 9px;
+    background: var(--pink-deep);
+    border-radius: 50%;
+}
+
+.birads-chapter {
+    padding-top: 34px;
+    padding-bottom: 36px;
+}
+
+.birads-spectrum {
+    position: relative;
+    margin: 24px 0;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(120px, 1fr));
+    gap: 0;
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.birads-spectrum::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #9ca3af, #16a34a, #86efac, #facc15, #fb923c, #ef4444, #7f1d1d);
+    border-radius: 999px;
+}
+
+.birads-step {
+    position: relative;
+    min-width: 120px;
+    padding: 62px 10px 0;
+    text-align: center;
+}
+
+.birads-step::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    transform: translateX(-50%);
+    background: var(--risk-color);
+    border: 4px solid #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(44, 21, 34, 0.16);
+}
+
+.birads-step span {
+    display: block;
+    color: var(--plum);
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.birads-step strong {
+    display: block;
+    margin: 5px 0 8px;
+    color: var(--risk-color);
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.birads-step p {
+    margin: 0;
+    color: #5f5860;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.birads-0 { --risk-color: #6b7280; }
+.birads-1 { --risk-color: #16a34a; }
+.birads-2 { --risk-color: #65a30d; }
+.birads-3 { --risk-color: #ca8a04; }
+.birads-4 { --risk-color: #ea580c; }
+.birads-5 { --risk-color: #dc2626; }
+.birads-6 { --risk-color: #7f1d1d; }
+
+.references-card {
+    padding-bottom: 12px;
+}
+
+.page-shell > .content-section.two-column,
+.page-shell > .content-section.links-grid,
+.page-shell > .content-section.publication-overview,
+.page-shell > .content-section.publication-featured {
+    padding-top: 18px;
+}
+
+.page-shell > .content-section .info-block,
+.page-shell > .content-section .feature-card,
+.page-shell > .content-section .links-grid a,
+.page-shell > .content-section .publication-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
 footer {
     background: linear-gradient(
         110deg,
@@ -668,9 +1381,9 @@ footer a {
         gap: 14px;
     }
 
-    header > img {
-        width: 58px;
-        height: 58px;
+    .brand-flower {
+        width: 42px;
+        height: 42px;
         padding: 0;
         background: transparent;
         border: 0;
@@ -739,7 +1452,13 @@ footer a {
     .hero-section,
     .card-grid,
     .two-column,
-    .links-grid {
+    .links-grid,
+    .publication-overview,
+    .publication-featured,
+    .publication-grid,
+    .clinical-layout,
+    .clinical-split,
+    .birads-grid {
         grid-template-columns: 1fr;
     }
 
@@ -764,7 +1483,7 @@ footer a {
         padding: 4px;
     }
 
-    header > div img {
+    header > div > a img {
         height: 38px;
         max-width: 82px;
     }
@@ -773,9 +1492,9 @@ footer a {
         display: none;
     }
 
-    header > img {
-        width: 48px;
-        height: 48px;
+    .brand-flower {
+        width: 34px;
+        height: 34px;
         padding: 0;
         background: transparent;
         border: 0;
@@ -817,5 +1536,33 @@ footer a {
     .timeline-list div {
         grid-template-columns: 1fr;
         gap: 8px;
+    }
+
+    .publication-card {
+        padding: 18px;
+    }
+
+    .publication-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .publication-card a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .clinical-card,
+    .birads-card {
+        padding: 18px;
+    }
+
+    .clinical-image-slot {
+        min-height: 240px;
+    }
+
+    .clinical-image-slot img {
+        min-height: 180px;
     }
 }
