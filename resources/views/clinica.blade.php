@@ -11,6 +11,7 @@
 
     <section class="cl-page">
 
+        <div class="cl-divider"></div>
 
         <div class="cl-prose">
             <p>El cáncer es una anormalidad: desde el punto de vista biológico, es un trastorno caracterizado por la alteración del equilibrio entre la proliferación y los mecanismos normales de muerte celular.</p>

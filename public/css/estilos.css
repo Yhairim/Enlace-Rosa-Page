@@ -353,6 +353,285 @@ nav ul li a.active {
     line-height: 1.5;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   INICIO / HOME — Estilos
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Contenedor base ────────────────────────────────────────── */
+
+.home-container {
+    width: min(1140px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+/* ─── Sección base ───────────────────────────────────────────── */
+
+.home-section {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.home-section-title {
+    margin: 8px 0 1.25rem;
+    color: var(--plum, #3d0d22);
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+
+.home-hero {
+    background: linear-gradient(160deg, #fff0f5 0%, #fce4ee 100%);
+    padding: clamp(3rem, 7vw, 5.5rem) 0;
+    border-bottom: 1px solid rgba(194, 24, 91, 0.12);
+}
+
+.home-hero-inner {
+    width: min(1140px, calc(100% - 36px));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+/* logo bloque */
+.home-logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.home-logo-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.home-logo-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--pink-deep, #c2185b);
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.home-logo-flor {
+    width: clamp(36px, 5vw, 56px);
+    height: auto;
+    object-fit: contain;
+}
+
+.home-logo-sub {
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    color: var(--text-muted, #9a6878);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.home-hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ─── PROBLEMÁTICA ───────────────────────────────────────────── */
+
+.home-problema {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(194, 24, 91, 0.08);
+}
+
+.home-problema-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+
+.home-problema-text p {
+    color: #5a4a52;
+    font-size: 0.97rem;
+    line-height: 1.8;
+    margin-bottom: 1.1rem;
+    text-align: justify;
+}
+
+.home-problema-text strong {
+    color: var(--pink-deep, #c2185b);
+    font-weight: 700;
+}
+
+/* referencias pequeñas */
+.home-refs {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: #fff0f5;
+    border-left: 3px solid var(--pink-deep, #c2185b);
+    border-radius: 0 8px 8px 0;
+}
+
+.home-refs-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--pink-deep, #c2185b);
+    margin: 0 0 0.6rem;
+}
+
+.home-refs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.home-refs ul li {
+    font-size: 0.82rem;
+    color: #7a6670;
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.home-refs ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--pink-deep, #c2185b);
+    font-weight: 700;
+}
+
+.home-refs ul li a {
+    color: var(--pink-deep, #c2185b);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* imagen / gráfica */
+.home-problema-fig {
+    margin: 0;
+    position: sticky;
+    top: 2rem;
+}
+
+.home-img-slot {
+    background: linear-gradient(135deg, #fff0f5, #fdf5f8);
+    border: 1px solid rgba(194, 24, 91, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-img-slot img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    display: block;
+}
+
+.home-problema-fig figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.8rem;
+    color: #9a6878;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ─── CARRUSEL ───────────────────────────────────────────────── */
+
+.home-carousel-section {
+    padding: 0;
+}
+
+/* ─── NAVEGACIÓN ─────────────────────────────────────────────── */
+
+.home-nav-section {
+    background: #ffffff;
+}
+
+/* ─── INSTITUCIONES ──────────────────────────────────────────── */
+
+.home-instituciones {
+    background: #fff0f5;
+    border-top: 1px solid rgba(194, 24, 91, 0.1);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.home-instituciones .eyebrow {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.home-inst-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem 3.5rem;
+    margin-top: 0.5rem;
+}
+
+.home-inst-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.home-inst-item:hover {
+    opacity: 1;
+}
+
+.home-inst-item img {
+    max-height: 80px;
+    max-width: 160px;
+    object-fit: contain;
+}
+
+/* placeholder mientras no hay imagen */
+.home-inst-placeholder {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #9a6878;
+    padding: 0.75rem 1.25rem;
+    border: 1px dashed rgba(194, 24, 91, 0.25);
+    border-radius: 8px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .home-problema-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-problema-fig {
+        position: static;
+        order: -1;
+    }
+
+    .home-inst-grid {
+        gap: 2rem;
+    }
+
+    .home-inst-item img {
+        max-height: 60px;
+        max-width: 120px;
+    }
+}
+
 .carousel-section {
     width: min(1140px, calc(100% - 36px));
     margin: 0 auto;
@@ -1452,6 +1731,508 @@ nav ul li a.active {
     /* BI-RADS en 2 columnas en móvil */
     .cl-birads-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INVESTIGACIÓN COMPUTACIONAL — Estilos adicionales
+   Extiende clinical.css  ·  Prefijo: cl-
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Bloque de investigación (equivalente al chapter) ───────── */
+
+.cl-research-block {
+    margin: 2.75rem 0;
+    padding: 2rem 2rem 2rem;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(44, 21, 34, 0.05);
+}
+
+.cl-research-block + .cl-research-block {
+    margin-top: 1.75rem;
+}
+
+/* ─── Cabecera del bloque (número + título) ──────────────────── */
+
+.cl-research-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.cl-research-num {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--cl-bg);
+    border: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--cl-pink);
+    margin-top: 2px;
+}
+
+.cl-heading--block {
+    margin: 0;
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+}
+
+/* ─── Figura / imagen ────────────────────────────────────────── */
+
+.cl-figure {
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--cl-border);
+    box-shadow: 0 4px 14px rgba(44, 21, 34, 0.06);
+}
+
+.cl-figure-img {
+    background: linear-gradient(135deg, var(--cl-bg), #fdf5f8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    padding: 1rem;
+}
+
+.cl-figure-img img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    display: block;
+}
+
+.cl-figure-caption {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--cl-bg);
+    border-top: 1px solid var(--cl-border);
+    font-size: 0.83rem;
+    color: var(--cl-muted);
+    line-height: 1.5;
+}
+
+.cl-figure-label {
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--cl-pink);
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 999px;
+    padding: 2px 9px;
+}
+
+/* ─── Tarjeta de artículo científico ─────────────────────────── */
+
+.cl-article-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 1.1rem 1.25rem;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-left: 4px solid var(--cl-pink);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 14px rgba(44, 21, 34, 0.06);
+    text-decoration: none;
+    transition:
+        box-shadow 0.2s ease,
+        border-left-color 0.2s ease;
+}
+
+.cl-article-card:hover {
+    box-shadow: 0 6px 22px rgba(44, 21, 34, 0.1);
+    border-left-color: var(--cl-pink-light);
+}
+
+.cl-article-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--cl-bg);
+    border: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cl-pink);
+    margin-top: 2px;
+}
+
+.cl-article-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.cl-article-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cl-article-type {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--cl-pink);
+}
+
+.cl-article-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cl-plum);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.cl-article-link {
+    font-size: 0.8rem;
+    color: var(--cl-muted);
+    margin-top: 2px;
+}
+
+/* ─── Acceso (fecha de último acceso en ref) ─────────────────── */
+
+.cl-ref-access {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--cl-muted);
+    margin-top: 3px;
+    font-style: italic;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+    .cl-research-block {
+        padding: 1.25rem 1rem;
+    }
+
+    .cl-research-header {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .cl-article-card {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACERCA DE — Estilos adicionales
+   Extiende clinical.css  ·  Prefijo: cl-
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Tarjeta de resumen ─────────────────────────────────────── */
+
+.cl-about-card {
+    margin: 1.75rem 0;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-left: 4px solid var(--cl-pink);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 14px rgba(44, 21, 34, 0.05);
+    overflow: hidden;
+}
+
+.cl-about-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.85rem 1.25rem;
+    background: var(--cl-bg);
+    border-bottom: 1px solid var(--cl-border);
+}
+
+.cl-about-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cl-pink);
+    flex-shrink: 0;
+}
+
+.cl-about-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cl-about-card-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-pink);
+}
+
+.cl-about-card-body {
+    padding: 1.1rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--cl-text);
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+/* ─── Logos institucionales ──────────────────────────────────── */
+
+.cl-logos {
+    margin: 2.5rem 0;
+}
+
+.cl-logos-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cl-pink);
+    margin: 0 0 1rem;
+}
+
+.cl-logos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.cl-logo-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cl-logo-slot a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cl-logo-slot img {
+    max-width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+.cl-logo-hrae {
+    max-height: 150px !important;
+}
+
+/* ─── Sección de equipo ──────────────────────────────────────── */
+
+.cl-team {
+    margin: 2.5rem 0;
+    display: grid;
+    gap: 2rem;
+}
+
+.cl-team-block {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.cl-team-block .cl-heading {
+    margin: 0;
+}
+
+/* responsable técnico */
+.cl-team-lead {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(44, 21, 34, 0.04);
+}
+
+.cl-team-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--cl-bg);
+    border: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--cl-pink);
+    flex-shrink: 0;
+}
+
+.cl-team-lead-info {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.cl-team-lead-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cl-plum);
+    margin: 0;
+}
+
+.cl-team-lead-role {
+    font-size: 0.85rem;
+    color: var(--cl-muted);
+    margin: 0;
+}
+
+.cl-team-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--cl-pink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cl-team-email svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.cl-team-email:hover {
+    color: var(--cl-pink-light);
+}
+
+/* columnas investigadores / estudiantes */
+.cl-team-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+/* lista de miembros */
+.cl-team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(44, 21, 34, 0.04);
+}
+
+.cl-team-list li {
+    padding: 0.75rem 1.1rem;
+    font-size: 0.9rem;
+    color: var(--cl-text);
+    border-bottom: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cl-team-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cl-pink);
+    flex-shrink: 0;
+}
+
+.cl-team-list li:last-child {
+    border-bottom: none;
+}
+
+/* ─── Bloque de contacto ─────────────────────────────────────── */
+
+.cl-contact {
+    margin: 2.5rem 0 1rem;
+    padding: 1.5rem;
+    background: var(--cl-bg);
+    border: 1px solid var(--cl-border);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cl-contact-inner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cl-contact-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid var(--cl-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cl-pink);
+}
+
+.cl-contact-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.cl-contact-label {
+    font-size: 0.85rem;
+    color: var(--cl-muted);
+    margin: 0;
+}
+
+.cl-contact-email {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cl-pink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cl-contact-email:hover {
+    color: var(--cl-pink-light);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+    .cl-logos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cl-team-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .cl-team-lead {
+        flex-direction: column;
+        gap: 0.75rem;
     }
 }
 
