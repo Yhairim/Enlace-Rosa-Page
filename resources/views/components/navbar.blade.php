@@ -21,10 +21,25 @@
 <script>
     document.querySelectorAll('.menu-toggle').forEach((button) => {
         const nav = button.closest('nav');
+        const mobileMenu = window.matchMedia('(max-width: 965px)');
+
+        const closeMenu = () => {
+            nav.classList.remove('is-open');
+            button.setAttribute('aria-expanded', 'false');
+        };
+
+        const syncMenuState = () => {
+            if (!mobileMenu.matches) {
+                closeMenu();
+            }
+        };
 
         button.addEventListener('click', () => {
             const isOpen = nav.classList.toggle('is-open');
             button.setAttribute('aria-expanded', String(isOpen));
         });
+
+        mobileMenu.addEventListener('change', syncMenuState);
+        syncMenuState();
     });
 </script>
