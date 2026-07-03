@@ -9,7 +9,7 @@
         <div class="home-hero-inner">
             <div class="home-logo-block">
                 <div class="home-logo-text">
-                    <span class="home-logo-title">ENLACE ROSA</span>
+                    <span class="home-logo-title" data-no-translate>ENLACE ROSA</span>
                     <img src="{{ asset('images/flor.png') }}" alt="" class="home-logo-flor" aria-hidden="true">
                 </div>
                 <p class="home-logo-sub">Un entorno tecnológico para la valoración de cáncer de mama</p>

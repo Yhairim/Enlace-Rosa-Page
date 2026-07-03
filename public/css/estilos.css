@@ -88,6 +88,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--line);
@@ -167,6 +168,36 @@ header p {
     height: clamp(34px, 3.6vw, 48px);
     object-fit: contain;
     flex: 0 0 auto;
+}
+
+.language-toggle {
+    min-width: 96px;
+    min-height: 40px;
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink-deep);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(194, 24, 91, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(194, 24, 91, 0.12);
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.language-toggle:hover {
+    color: #ffffff;
+    background: var(--pink-deep);
+    border-color: var(--pink-deep);
+    transform: translateY(-1px);
 }
 
 /* ─── Nav ────────────────────────────────────────────────────── */
@@ -857,10 +888,12 @@ footer a {
 @media (max-width: 640px) {
     header {
         padding: 14px 16px;
+        flex-wrap: wrap;
     }
     header > div {
         gap: 10px;
         flex: 1;
+        min-width: min(100%, 300px);
     }
     header > div > a {
         min-width: 48px;
@@ -883,6 +916,12 @@ footer a {
     }
     header p {
         font-size: 0.72rem;
+    }
+    .language-toggle {
+        width: 100%;
+        min-height: 38px;
+        padding: 8px 12px;
+        font-size: 0.74rem;
     }
 
     .hero-section,

@@ -22,7 +22,7 @@
 
         <div class="brand-copy">
             <div class="brand-lockup">
-                <h1>ENLACE ROSA</h1>
+                <h1 data-no-translate>ENLACE ROSA</h1>
                 {{--
                     HEADER IMAGE SLOT: Enlace Rosa decorative image
                     Current expected file path: public/images/flor.png
@@ -34,5 +34,9 @@
             <p>Un entorno tecnológico para la valoración de cáncer de mama</p>
         </div>
     </div>
+
+    <button class="language-toggle" type="button" aria-pressed="false" data-language-toggle data-no-translate>
+        English
+    </button>
 
 </header>

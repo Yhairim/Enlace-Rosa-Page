@@ -21,5 +21,6 @@
     {{-- FOOTER --}}
     @include('components.footer')
 
+    <script src="{{ asset('js/language-toggle.js') }}"></script>
 </body>
 </html>
