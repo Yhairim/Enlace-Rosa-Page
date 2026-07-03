@@ -93,7 +93,6 @@
                     <ul class="cl-team-list">
                         <li>Angélica Martínez Vidaña</li>
                         <li>César A. Ramírez Gámez</li>
-                        <li>José Luis de J. Negrete Espino</li>
                         <li>Mario César Velez Zamarrón</li>
                         <li>Yhairim Gamboa Durán</li>
                         <li>Zazil J. Ibarra Cuevas</li>
