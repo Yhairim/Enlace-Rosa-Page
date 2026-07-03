@@ -1486,6 +1486,45 @@ footer a {
     color: #ffffff;
 }
 
+/* ─── Flecha de peligrosidad BI-RADS ─────────────────────────── */
+
+.cl-birads-arrow {
+    margin-top: 0.75rem;
+    /* empieza en el 4to elemento (birads-3) de 7 columnas */
+    padding-left: calc((3 / 7) * 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cl-birads-arrow-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #c84020;
+}
+
+.cl-birads-arrow-track {
+    display: flex;
+    align-items: center;
+}
+
+.cl-birads-arrow-bar {
+    flex: 1;
+    height: 4px;
+    background: linear-gradient(90deg, #e8d44d, #e8922a, #d94e2a, #a82020);
+    border-radius: 2px 0 0 2px;
+}
+
+.cl-birads-arrow-head {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #a82020;
+}
+
 /* ─── Estudios adicionales ───────────────────────────────────── */
 
 .cl-estudios {

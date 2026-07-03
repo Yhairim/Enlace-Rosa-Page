@@ -83,6 +83,14 @@
             </div>
         </div>
 
+        <div class="cl-birads-arrow">
+            <span class="cl-birads-arrow-label">Mayor riesgo de malignidad</span>
+            <div class="cl-birads-arrow-track">
+                <div class="cl-birads-arrow-bar"></div>
+                <div class="cl-birads-arrow-head"></div>
+            </div>
+        </div>
+
         {{-- ── Estudios adicionales ─────────────────────────── --}}
         <div class="cl-estudios">
             <h2 class="cl-heading">Estudios adicionales</h2>
