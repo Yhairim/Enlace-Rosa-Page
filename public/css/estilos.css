@@ -1393,6 +1393,7 @@ footer a {
 
 .cl-birads {
     margin: 2.5rem 0;
+    --birads-gap: 0.75rem;
 }
 
 .cl-birads-sub {
@@ -1405,8 +1406,8 @@ footer a {
 
 .cl-birads-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--birads-gap);
 }
 
 .cl-b-step {
@@ -1492,9 +1493,10 @@ footer a {
 /* ─── Flecha de peligrosidad BI-RADS ─────────────────────────── */
 
 .cl-birads-arrow {
-    margin-top: 0.75rem;
-    /* empieza en el 4to elemento (birads-3) de 7 columnas */
-    padding-left: calc((3 / 7) * 100%);
+    width: calc(57.143% - 0.321rem);
+    margin-top: 1.4rem;
+    margin-left: calc(42.857% + 0.321rem);
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -1526,6 +1528,66 @@ footer a {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-left: 12px solid #a82020;
+}
+
+@media (max-width: 1100px) {
+    .cl-birads-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .cl-b3 {
+        grid-column: 1;
+    }
+    .cl-b4 {
+        grid-column: 2;
+    }
+    .cl-b5 {
+        grid-column: 3;
+    }
+    .cl-b6 {
+        grid-column: 4;
+    }
+
+    .cl-birads-arrow {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .cl-birads-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cl-b2 {
+        grid-column: 1 / -1;
+    }
+    .cl-b3,
+    .cl-b5 {
+        grid-column: 1;
+    }
+    .cl-b4,
+    .cl-b6 {
+        grid-column: 2;
+    }
+
+    .cl-birads-arrow {
+        margin-top: 1.2rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .cl-birads-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cl-b2,
+    .cl-b3,
+    .cl-b4,
+    .cl-b5,
+    .cl-b6 {
+        grid-column: auto;
+    }
 }
 
 /* ─── Estudios adicionales ───────────────────────────────────── */
@@ -1689,9 +1751,6 @@ footer a {
     }
     .cl-estudios-grid {
         grid-template-columns: 1fr;
-    }
-    .cl-birads-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
