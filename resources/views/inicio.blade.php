@@ -7,21 +7,42 @@
     {{-- ── HERO ─────────────────────────────────────────────── --}}
     <section class="home-hero">
         <div class="home-hero-inner">
-
-            {{-- Logo / título del proyecto --}}
             <div class="home-logo-block">
                 <div class="home-logo-text">
                     <span class="home-logo-title">ENLACE ROSA</span>
-                    {{-- Reemplaza src con la ruta real de tu flor --}}
                     <img src="{{ asset('images/flor.png') }}" alt="" class="home-logo-flor" aria-hidden="true">
                 </div>
                 <p class="home-logo-sub">Un entorno tecnológico para la valoración de cáncer de mama</p>
             </div>
-
-            {{-- Acciones --}}
-            <div class="hero-actions home-hero-actions">
+            <div class="home-hero-actions">
                 <a class="button-primary" href="{{ route('clinica') }}">Ver información clínica</a>
                 <a class="button-secondary" href="{{ route('computacional') }}">Explorar investigación</a>
+            </div>
+        </div>
+    </section>
+
+    {{-- ── CARRUSEL GRANDE ──────────────────────────────────── --}}
+    <section class="home-carousel-wrap" aria-label="Carrusel de infografías">
+        <div class="home-carousel-shell" data-carousel>
+
+            <article class="home-slide is-active">
+                <img src="{{ asset('images/carousel/slide-1.png') }}" alt="Infografía 1 - Enlace Rosa">
+            </article>
+            <article class="home-slide">
+                <img src="{{ asset('images/carousel/slide-2.png') }}" alt="Infografía 2 - Enlace Rosa">
+            </article>
+            <article class="home-slide">
+                <img src="{{ asset('images/carousel/slide-3.jpg') }}" alt="Infografía 3 - Enlace Rosa">
+            </article>
+
+            <div class="home-carousel-controls">
+                <button type="button" class="home-carousel-btn home-carousel-prev" aria-label="Imagen anterior">&#8249;</button>
+                <div class="home-carousel-dots" aria-hidden="true">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button type="button" class="home-carousel-btn home-carousel-next" aria-label="Imagen siguiente">&#8250;</button>
             </div>
 
         </div>
@@ -30,10 +51,8 @@
     {{-- ── PROBLEMÁTICA ─────────────────────────────────────── --}}
     <section class="home-section home-problema">
         <div class="home-container">
-
             <div class="home-problema-grid">
 
-                {{-- Texto --}}
                 <div class="home-problema-text">
                     <span class="eyebrow">Problemática</span>
                     <h2 class="home-section-title">El cáncer de mama en México</h2>
@@ -44,7 +63,6 @@
 
                     <p>Este proyecto tiene el propósito de desarrollar un sistema para la interpretación automática de mamografías, basado en procesamiento digital de imágenes, inteligencia artificial y aprendizaje para máquinas, permitiendo detecciones tempranas en poblaciones apartadas.</p>
 
-                    {{-- Referencias --}}
                     <div class="home-refs">
                         <p class="home-refs-label">Referencias</p>
                         <ul>
@@ -55,11 +73,9 @@
                     </div>
                 </div>
 
-                {{-- Imagen / gráfica --}}
                 <figure class="home-problema-fig">
-                    {{-- Reemplaza con tu imagen de prevalencia --}}
                     <div class="home-img-slot">
-                        <img src="{{ asset('images/grafica_prevalencia.png') }}" alt="Gráfica de prevalencia de cáncer de mama en México">
+                        <img src="{{ asset('images/Imagen1-Prevalencia_casos_in.png') }}" alt="Gráfica de prevalencia de cáncer de mama en México">
                     </div>
                     <figcaption>Figura 1. Prevalencia de casos de cáncer de mama en México</figcaption>
                 </figure>
@@ -68,18 +84,10 @@
         </div>
     </section>
 
-    {{-- ── CARRUSEL DE INFOGRAFÍAS ──────────────────────────── --}}
-    <section class="home-section home-carousel-section">
-        @include('components.carousel')
-    </section>
-
-   
-
     {{-- ── INSTITUCIONES ────────────────────────────────────── --}}
     <section class="home-section home-instituciones">
         <div class="home-container">
             <span class="eyebrow">Instituciones participantes</span>
-
             <div class="home-inst-grid">
 
                 <a href="https://sedeco.slp.gob.mx/copocyt/" target="_blank" rel="noopener" class="home-inst-item">
@@ -101,5 +109,28 @@
             </div>
         </div>
     </section>
+
+    {{-- ── Script carrusel ─────────────────────────────────── --}}
+    <script>
+        document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+            const slides  = [...carousel.querySelectorAll('.home-slide')];
+            const dots    = [...carousel.querySelectorAll('.home-carousel-dots span')];
+            const prevBtn = carousel.querySelector('.home-carousel-prev');
+            const nextBtn = carousel.querySelector('.home-carousel-next');
+            const delay   = 5500;
+            const auto    = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let current   = 0;
+
+            const show = (i) => {
+                current = (i + slides.length) % slides.length;
+                slides.forEach((s, idx) => s.classList.toggle('is-active', idx === current));
+                dots.forEach((d, idx)   => d.classList.toggle('active',    idx === current));
+            };
+
+            prevBtn.addEventListener('click', () => show(current - 1));
+            nextBtn.addEventListener('click', () => show(current + 1));
+            if (auto && slides.length > 1) setInterval(() => show(current + 1), delay);
+        });
+    </script>
 
 @endsection

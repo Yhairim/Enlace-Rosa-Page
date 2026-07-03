@@ -44,17 +44,23 @@
                 </figcaption>
             </figure>
 
-            <div class="cl-prose">
-                <div class="cl-clearfix">
-                    <aside class="cl-pull-list">
-                        <h4>Contenido de la figura</h4>
-                        <ul>
-                            <li><strong>a)</strong> Recorte sin eliminar los valores distintos de la lesión</li>
-                            <li><strong>b)</strong> Recorte eliminando los valores fuera de la lesión</li>
-                            <li><strong>c)</strong> Histograma de la lesión recortada sin eliminar valores externos</li>
-                            <li><strong>d)</strong> Histograma de los valores de la lesión</li>
-                        </ul>
-                    </aside>
+           {{-- Contenido de la figura en grid --}}
+            <div class="cl-figura-grid">
+                <div class="cl-figura-item">
+                    <span class="cl-figura-letra">a)</span>
+                    <p>Recorte sin eliminar los valores distintos de la lesión</p>
+                </div>
+                <div class="cl-figura-item">
+                    <span class="cl-figura-letra">b)</span>
+                    <p>Recorte eliminando los valores fuera de la lesión</p>
+                </div>
+                <div class="cl-figura-item">
+                    <span class="cl-figura-letra">c)</span>
+                    <p>Histograma de la lesión recortada sin eliminar valores externos</p>
+                </div>
+                <div class="cl-figura-item">
+                    <span class="cl-figura-letra">d)</span>
+                    <p>Histograma de los valores de la lesión</p>
                 </div>
             </div>
         </div>
