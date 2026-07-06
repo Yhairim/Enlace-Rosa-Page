@@ -1,10 +1,13 @@
 (function () {
+    // 01. Configuración general
     const STORAGE_KEY = "enlace-rosa-language";
     const ENGLISH = "en";
     const SPANISH = "es";
 
+    // 02. Diccionario: textos visibles en español -> inglés
     const translations = new Map(
         Object.entries({
+            // Compartido: header, navegación, títulos y footer
             "Un entorno tecnológico para la valoración de cáncer de mama":
                 "A technology environment for breast cancer assessment",
             "English": "English",
@@ -27,6 +30,7 @@
                 "If you would like to contact us, you can send a message to the project email:",
             "© Derechos Reservados": "© All Rights Reserved",
 
+            // Inicio
             "Ver información clínica": "View clinical information",
             "Explorar investigación": "Explore research",
             "Carrusel de infografías": "Infographic carousel",
@@ -60,6 +64,7 @@
             "Facultad de Ingeniería UASLP": "UASLP School of Engineering",
             "Hospital Regional de Alta Especialidad": "Regional High Specialty Hospital",
 
+            // Información clínica
             "Lo que debes saber sobre el cáncer de mama":
                 "What you should know about breast cancer",
             "El cáncer es una anormalidad: desde el punto de vista biológico, es un trastorno caracterizado por la alteración del equilibrio entre la proliferación y los mecanismos normales de muerte celular.":
@@ -118,6 +123,7 @@
             "La mamografía o también llamada mastografía es un estudio que obtiene cuatro radiografías: dos céfalo caudal y dos oblicuo-lateral, una para cada seno.":
                 "Mammography is a study that obtains four radiographs: two craniocaudal and two mediolateral oblique views, one for each breast.",
 
+            // Investigación computacional
             "Tecnología aplicada al análisis de imágenes mamarias":
                 "Technology applied to breast image analysis",
             "El procesamiento digital de las imágenes radiográficas requiere de varios algoritmos, algunos en términos de las características de las imágenes y otros en el reconocimiento de patrones. El resultado final del sistema también tiene que estar basado en un análisis de las cuatro imágenes que conforman una mamografía, así como en una valoración de los factores de riesgo.":
@@ -148,6 +154,7 @@
             "Artículo científico publicado": "Published scientific article",
             "Último acceso: 03/11/2021": "Last accessed: 03/11/2021",
 
+            // Publicaciones
             "Producción científica del proyecto de cáncer de mama":
                 "Scientific output of the breast cancer project",
             "Investigación, divulgación y materiales académicos desarrollados alrededor de Enlace Rosa,": "Research, outreach, and academic materials developed around Enlace Rosa,",
@@ -195,6 +202,7 @@
             "Consultar boletín": "View newsletter",
             "Consultar proceedings": "View proceedings",
 
+            // Sitios relacionados
             "Recursos externos de consulta": "External reference resources",
             "Enlaces de referencia para ampliar información sobre salud, investigación y prevención del cáncer":
                 "Reference links to expand information on health, research, and cancer prevention",
@@ -212,6 +220,7 @@
             "Base de datos global de la OMS con estadísticas e incidencia del cáncer por país y región.":
                 "WHO global database with cancer statistics and incidence by country and region.",
 
+            // Acerca de
             "Un puente entre salud, datos e investigación":
                 "A bridge between health, data, and research",
             "Este proyecto es financiado por el Fideicomiso 23871 de Multas Electorales, en el marco de la Convocatoria 2023-01 de Proyectos de investigación, desarrollo tecnológico e innovación del Consejo Potosino de Ciencia y Tecnología (COPOCYT).":
@@ -232,10 +241,12 @@
         })
     );
 
+    // 03. Diccionario inverso: permite volver a español sin recargar
     const reverseTranslations = new Map(
         Array.from(translations.entries()).map(([spanish, english]) => [english, spanish])
     );
 
+    // 04. Selectores que nunca deben traducirse
     const ignoredSelectors = [
         "script",
         "style",
@@ -249,6 +260,7 @@
         return !parent || parent.closest(ignoredSelectors);
     };
 
+    // 05. Utilidades de traducción
     const normalizeText = (text) => text.replace(/\s+/g, " ").trim();
 
     const translateText = (text, dictionary) => {
@@ -277,6 +289,7 @@
         });
     };
 
+    // 06. Traducción completa de la página actual
     const translatePage = (language) => {
         const dictionary = language === ENGLISH ? translations : reverseTranslations;
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -301,6 +314,7 @@
         });
     };
 
+    // 07. Inicialización y eventos
     const initialLanguage = localStorage.getItem(STORAGE_KEY) || SPANISH;
 
     document.addEventListener("DOMContentLoaded", () => {

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Página de inicio
 Route::get('/', function () {
     return view('inicio');
 })->name('home');
@@ -10,6 +11,7 @@ Route::get('/inicio', function () {
     return view('inicio');
 })->name('inicio');
 
+// Secciones públicas principales
 Route::get('/clinica', function () {
     return view('clinica');
 })->name('clinica');
