@@ -95,6 +95,7 @@
                         <li>César A. Ramírez Gámez</li>
                         <li>Mario César Velez Zamarrón</li>
                         <li>Yhairim Gamboa Durán</li>
+                        <li>Ricardo Adrian Santillán Salazar</li>
                         <li>Zazil J. Ibarra Cuevas</li>
                     </ul>
                 </div>
