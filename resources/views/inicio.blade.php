@@ -75,7 +75,7 @@
 
                 <figure class="home-problema-fig">
                     <div class="home-img-slot">
-                        <img src="{{ asset('images/Imagen1-Prevalencia_casos_in.png') }}" alt="Gráfica de prevalencia de cáncer de mama en México">
+                        <img src="public/images/imagenInicioEN.png" alt="Gráfica de prevalencia de cáncer de mama en México">
                     </div>
                     <figcaption>Figura 1. Prevalencia de casos de cáncer de mama en México</figcaption>
                 </figure>

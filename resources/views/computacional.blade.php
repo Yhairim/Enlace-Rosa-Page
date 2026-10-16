@@ -36,7 +36,7 @@
             {{-- Imagen --}}
             <figure class="cl-figure">
                 <div class="cl-figure-img">
-                    <img src="{{ asset('images/Analisis_val_max.png') }}" alt="Distribución de frecuencias para establecer rangos en lesiones">
+                    <img src="public/images/Analisis_val_max.png" alt="Distribución de frecuencias para establecer rangos en lesiones">
                 </div>
                 <figcaption class="cl-figure-caption">
                     <span class="cl-figure-label">Figura 1</span>

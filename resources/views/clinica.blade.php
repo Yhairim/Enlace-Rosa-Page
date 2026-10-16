@@ -26,7 +26,7 @@
             {{-- ── Pull list flotante ──────────────────────── --}}
             <div class="cl-clearfix">
                 <aside class="cl-pull-list">
-                    <h4>Programas de detección mamaria</h4>
+                    <h4>Los programas de detección de cáncer mamario señalan lo siguiente:</h4>
                     <ul>
                         <li>Mamografía anual a partir de los 40 años</li>
                         <li>Exploración física por personal de salud capacitado, desde los 25 años</li>
@@ -37,13 +37,13 @@
                 <p>Los programas de detección de cáncer mamario buscan identificar lesiones en etapas tempranas, cuando las posibilidades de tratamiento exitoso son mayores. La detección oportuna es la herramienta más eficaz disponible para reducir la mortalidad asociada a esta enfermedad.</p>
 
                 <div class="cl-callout">
-                    <p>→ <a href="https://www.cancer.org/es/cancer/cancer-de-seno/pruebas-de-deteccion-y-deteccion-temprana-del-cancer-de-seno/mamogramas/como-entender-su-informe-de-mamograma.html" target="_blank" rel="noopener">Recomendaciones para una Autoexploración correcta</a></p>
+                    <p>→ <a href="http://www.imss.gob.mx/salud-en-linea/infografias/infografia-cancermama" target="_blank" rel="noopener">Recomendaciones para una Autoexploración correcta</a></p>
                 </div>
             </div>
 
             {{-- ── Epidemiología y mamografía ──────────────── --}}
             <p>La incidencia del cáncer varía según la edad, género, grupo étnico, país o región y tiempo. Los estudios epidemiológicos han identificado un gran número de factores de riesgo relacionados con la aparición de cáncer, que con frecuencia no son la causa directa, sino indicadores de los factores reales.</p>
-            <p>La mamografía es un procedimiento para obtener una imagen radiográfica de las glándulas mamarias, cuya finalidad es reconocer posibles lesiones. La escala de este tamizaje es <strong><a href="https://www.imss.gob.mx/salud-en-linea/infografias/infografia-cancermama" target="_blank" rel="noopener">BI-RADS</a></strong>, un instrumento de garantía de la calidad concebido para normalizar el informe de estudios por imágenes de la mama, disminuir la discordancia entre interpretaciones y facilitar la vigilancia de los resultados.</p>
+            <p>La mamografía es un procedimiento para obtener una imagen radiográfica de las glándulas mamarias, cuya finalidad es reconocer posibles lesiones. La escala de este tamizaje es <strong><a href="https://www.cancer.org/es/cancer/tipos/cancer-de-seno/pruebas-de-deteccion-y-deteccion-temprana-del-cancer-de-seno/mamogramas/como-entender-su-informe-de-mamograma.html" target="_blank" rel="noopener">BI-RADS</a></strong>, un instrumento de garantía de la calidad concebido para normalizar el informe de estudios por imágenes de la mama, disminuir la discordancia entre interpretaciones y facilitar la vigilancia de los resultados.</p>
         </div>
 
         {{-- ── Clasificación BI-RADS ────────────────────────── --}}
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <figure class="cl-estudio-img">
-                        <img src="{{ asset('images/Radiografia.png') }}" alt="Imagen de radiografía de mama">
+                        <img src="public/images/Radiografia.png" alt="Imagen de radiografía de mama">
                     </figure>
                     <div class="cl-estudio-body">
                         Es posible que el radiólogo sugiera estudios adicionales con el objetivo de señalar un diagnóstico más completo
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                     <figure class="cl-estudio-img">
-                        <img src="{{ asset('images/Mastografia.png') }}" alt="Imagen de mastografía">
+                        <img src="public/images/Mastografia.png" alt="Imagen de mastografía">
                     </figure>
                     <div class="cl-estudio-body">
                         La mamografía o también llamada mastografía es un estudio que obtiene cuatro radiografías: dos céfalo caudal y dos oblicuo-lateral, una para cada seno.
