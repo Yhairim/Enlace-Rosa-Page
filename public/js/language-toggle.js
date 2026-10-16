@@ -158,6 +158,7 @@
             "Producción científica del proyecto de cáncer de mama":
                 "Scientific output of the breast cancer project",
             "Investigación, divulgación y materiales académicos desarrollados alrededor de Enlace Rosa,": "Research, outreach, and academic materials developed around Enlace Rosa,",
+            "Investigación, divulgación y materiales académicos desarrollados alrededor de Enlace Rosa.": "Research, outreach, and academic materials developed around Enlace Rosa.",
             "inteligencia artificial, mamografía digital y valoración de riesgo.":
                 "artificial intelligence, digital mammography, and risk assessment.",
             "Resumen de publicaciones": "Publication summary",
@@ -179,21 +180,16 @@
                 "Explore the project's published works, chapters, conferences, newsletters, and videos.",
             "Catálogo de publicaciones": "Publication catalog",
             "Video / IA aplicada": "Video / applied AI",
-            "Uso de IA para detección oportuna del Cáncer de Mama":
-                "Use of AI for timely breast cancer detection",
             "Video de YouTube orientado a la divulgación del uso de inteligencia artificial para detección oportuna.":
                 "YouTube video focused on outreach about the use of artificial intelligence for timely detection.",
             "Ver recurso": "View resource",
             "Conferencia / calcificaciones": "Conference / calcifications",
             "Interacción humano-computadora": "Human-computer interaction",
             "Capítulo de libro / IA en salud": "Book chapter / AI in health",
-            "Sistemas de apoyo en la identificación automática del Cáncer de Mama: Caso práctico":
-                "Support systems for automatic breast cancer identification: Case study",
             "Boletín institucional": "Institutional newsletter",
             "Factores de riesgo": "Risk factors",
             "Conferencia / sistemas activos": "Conference / active systems",
             "Divulgación / prevención": "Outreach / prevention",
-            "Sensibilización sobre el cáncer de mama": "Breast cancer awareness",
             "Video de YouTube dedicado a la sensibilización y difusión sobre cáncer de mama.":
                 "YouTube video dedicated to breast cancer awareness and outreach.",
             "Consultar capítulo": "View chapter",
@@ -201,6 +197,22 @@
             "Consultar libro": "View book",
             "Consultar boletín": "View newsletter",
             "Consultar proceedings": "View proceedings",
+            "Artículo": "Article",
+            "Entrevista": "Interview",
+            "Artículo de conferencia": "Conference paper",
+            "Capítulo de libro": "Book chapter",
+            "Boletín de divulgación científica y educación": "Science and education outreach newsletter",
+            "Artículo de divulgación": "Outreach article",
+            "En": "In",
+            "Francisco E Martínez-Perez. Revista TecnoDisruptiva, No. 10, pp. 6-11, Copocyt. 2026": "Francisco E. Martínez-Pérez. TecnoDisruptiva Magazine, No. 10, pp. 6–11, COPOCYT, 2026.",
+            "Entrevista en radio al Dr. Francisco Eduardo Martínez Pérez sobre el uso de inteligencia artificial e ingeniería computacional para acelerar el análisis de mastografías y lograr una detección oportuna.": "Radio interview with Dr. Francisco Eduardo Martínez Pérez about using artificial intelligence and computational engineering to speed up mammogram analysis and support early detection.",
+            "Mesa de diálogo con expertos médicos y tecnólogos sobre cómo la Inteligencia Artificial se está integrando en el análisis de mastografías para un diagnóstico más rápido y preciso.": "A panel with medical and technology experts on how artificial intelligence is being integrated into mammogram analysis for faster, more accurate diagnosis.",
+            "Francisco E. Martínez Pérez. Boletín del Hospital Central “Dr. Ignacio Morones Prieto”.": "Francisco E. Martínez Pérez. Central Hospital “Dr. Ignacio Morones Prieto” Newsletter.",
+            "Juanita Hernández López et al.": "Juanita Hernández López et al.",
+            "Material de sensibilización y prevención sobre cáncer de mama.": "Breast cancer awareness and prevention material.",
+            "Sandra E. Nava Muñoz.": "Sandra E. Nava Muñoz.",
+            "Francisco E. Martínez-Pérez et al. Proceedings of the 15th International Conference on": "Francisco E. Martínez-Pérez et al. Proceedings of the 15th International Conference on",
+            "para mejorar el análisis de mamografías digitales.": "to improve digital mammogram analysis.",
 
             // Sitios relacionados
             "Recursos externos de consulta": "External reference resources",
@@ -302,6 +314,9 @@
 
         translateAttributes(document, dictionary);
         document.documentElement.lang = language;
+        document.querySelectorAll("[data-image-es][data-image-en]").forEach((image) => {
+            image.src = image.getAttribute(language === ENGLISH ? "data-image-en" : "data-image-es");
+        });
         document.title = translateText(document.title, dictionary);
 
         document.querySelectorAll("[data-language-toggle]").forEach((button) => {

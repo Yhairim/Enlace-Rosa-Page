@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <figure class="cl-estudio-img">
-                        <img src="public/images/Radiografia.png" alt="Imagen de radiografía de mama">
+                        <img src="{{ asset('images/radiografia.png') }}" alt="Imagen de radiografía de mama">
                     </figure>
                     <div class="cl-estudio-body">
                         Es posible que el radiólogo sugiera estudios adicionales con el objetivo de señalar un diagnóstico más completo
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                     <figure class="cl-estudio-img">
-                        <img src="public/images/Mastografia.png" alt="Imagen de mastografía">
+                        <img src="{{ asset('images/mastografia.png') }}" alt="Imagen de mastografía">
                     </figure>
                     <div class="cl-estudio-body">
                         La mamografía o también llamada mastografía es un estudio que obtiene cuatro radiografías: dos céfalo caudal y dos oblicuo-lateral, una para cada seno.

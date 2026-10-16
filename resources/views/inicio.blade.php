@@ -12,7 +12,7 @@
                     <span class="home-logo-title" data-no-translate>ENLACE ROSA</span>
                     <img src="{{ asset('images/flor.png') }}" alt="" class="home-logo-flor" aria-hidden="true">
                 </div>
-                <p class="home-logo-sub">Un entorno tecnológico para la valoración de cáncer de mama</p>
+                <p class="home-logo-sub" data-no-translate>Un entorno tecnológico para la valoración de cáncer de mama</p>
             </div>
             <div class="home-hero-actions">
                 <a class="button-primary" href="{{ route('clinica') }}">Ver información clínica</a>
@@ -26,20 +26,15 @@
         <div class="home-carousel-shell" data-carousel>
 
             <article class="home-slide is-active">
-                <img src="{{ asset('images/carousel/slide-1.png') }}" alt="Infografía 1 - Enlace Rosa">
+                <img src="{{ asset('images/carousel/slide-1.png') }}" data-image-es="{{ asset('images/carousel/slide-1.png') }}" data-image-en="{{ asset('images/carousel/en/slide-1.png') }}" alt="Infografía 1 - Enlace Rosa">
             </article>
             <article class="home-slide">
-                <img src="{{ asset('images/carousel/slide-2.png') }}" alt="Infografía 2 - Enlace Rosa">
+                <img src="{{ asset('images/carousel/slide-2.jpg') }}" data-image-es="{{ asset('images/carousel/slide-2.jpg') }}" data-image-en="{{ asset('images/carousel/en/slide-2.jpg') }}" alt="Infografía 2 - Enlace Rosa">
             </article>
-            <article class="home-slide">
-                <img src="{{ asset('images/carousel/slide-3.jpg') }}" alt="Infografía 3 - Enlace Rosa">
-            </article>
-
             <div class="home-carousel-controls">
                 <button type="button" class="home-carousel-btn home-carousel-prev" aria-label="Imagen anterior">&#8249;</button>
                 <div class="home-carousel-dots" aria-hidden="true">
                     <span class="active"></span>
-                    <span></span>
                     <span></span>
                 </div>
                 <button type="button" class="home-carousel-btn home-carousel-next" aria-label="Imagen siguiente">&#8250;</button>
@@ -75,7 +70,7 @@
 
                 <figure class="home-problema-fig">
                     <div class="home-img-slot">
-                        <img src="public/images/imagenInicioEN.png" alt="Gráfica de prevalencia de cáncer de mama en México">
+                        <img src="{{ asset('images/imagenInicioES.jpg') }}" data-image-es="{{ asset('images/imagenInicioES.jpg') }}" data-image-en="{{ asset('images/imagenInicioEN.png') }}" alt="Gráfica de prevalencia de cáncer de mama en México">
                     </div>
                     <figcaption>Figura 1. Prevalencia de casos de cáncer de mama en México</figcaption>
                 </figure>

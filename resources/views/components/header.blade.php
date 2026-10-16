@@ -16,7 +16,7 @@
                 {{-- Flor decorativa --}}
                 <img class="brand-flower" src="{{ asset('images/flor.png') }}" alt="Enlace Rosa">
             </div>
-            <p>Un entorno tecnológico para la valoración de cáncer de mama</p>
+            <p data-no-translate>Un entorno tecnológico para la valoración de cáncer de mama</p>
         </div>
     </div>
 
